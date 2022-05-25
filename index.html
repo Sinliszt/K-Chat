@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create An Account: K-Chat</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Ms+Madi&family=Roboto&family=Smooch&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="main.js"></script>
+    </head>
+    <body style="background-color:rgb(251, 241, 229); margin: 0;">
+        <div class="container">
+            <div class="menu">
+                <h1 style="text-align: center; font-family: 'Koulen', cursive;">K-CHAT</h1>
+            </div>
+            <br>
+            <center>
+                <div class="login_div">
+                    <h3 style="font-family: 'Roboto', sans-serif;"><b>Join K-Chat today</b></h3>
+                    <div class="form-group">
+                        <input type="text" id="user_name" placeholder="User Name">
+                    </div>
+                        <button id="login_button" onclick="addUser();">Sign in</button>
+                        <br><br>
+                    </div>
+            </center>
+        </div>
+    </body>
+</html>

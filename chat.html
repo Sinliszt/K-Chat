@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>K-Chat</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Ms+Madi&family=Roboto&family=Smooch&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu">
+                <h1 style="text-align: center; font-family: 'Koulen', cursive;">K-CHAT</h1>
+                <h4 id="welcome" style="text-align: right; margin-top: -70px; font-family: 'Roboto', sans-serif;"><span>&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <img src="profile.jpg" id='drop_btn' style="width: 45px; height: 45px;">
+                    <div class="dropdown-content">
+                      <a id="logout">Logout</a>
+                    </div>
+                </div></span></h4>
+            </div>
+            <center>
+                <div id="output"></div>
+            </center>
+        </div>
+        <center>
+            <div class="input_div_message_page">
+                <input type="text" id="msg" placeholder="Enter Your Message">
+                <br>
+                <button onclick="send()" class="button" style="width: 20%;">Send</button>
+            </div>
+        </center>
+        <script src="chat.js"></script>
+    </body>
+</html>

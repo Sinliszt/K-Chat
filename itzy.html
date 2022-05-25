@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>itzy: K-Chat</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Ms+Madi&family=Roboto&family=Smooch&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu">
+                <h1 style="text-align: center; font-family: 'Koulen', cursive;">K-CHAT</h1>
+                <h4 id="welcome" style="text-align: right; margin-top: -70px; font-family: 'Roboto', sans-serif;"><span>&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <img src="profile.jpg" id='drop_btn' style="width: 45px; height: 45px;">
+                    <div class="dropdown-content">
+                      <a id="logout">Logout</a>
+                    </div>
+                </div></span></h4>
+            </div>
+        </div>
+            <img src="itzybanner.jpg" style="width: 100%;">
+            <br>
+            <div class="main">
+                <div class="child" style="width: 50%;">
+                    <h3 style="font-family: 'Roboto', sans-serif;">Popular Songs</h3>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/56Yxkm62GtEpnPyG7TvwLY?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4pspYVQGFHLPEFgQPD1J7e?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Wcr8zrKqbUX0zwN8Dbr16?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="child" style="vertical-align: top; width: 600px;">
+                    <h3 style="font-family: 'Roboto', sans-serif;">See More</h3><br>
+                    <button id="chat_btn" class="button" id="itzy" onclick="redirectToRoomName(this.id);">Chat With Other Fans!</button><br><br>
+                    <a class='button' style='text-decoration: none;padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;'href="https://itzy.jype.com/" target="_blank">Official Website</a><br><br>
+                    <a class='button' style='text-decoration: none; padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;'href="https://twitter.com/ITZYOfficial" target="_blank">Twitter</a><br><br>
+                    <a class='button' style='text-decoration: none; padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;' href="https://www.youtube.com/c/ITZY" target="_blank">YouTube</a>
+                </div>
+            </div>
+            <h3 style="font-family: 'Roboto', sans-serif; text-align: center;">Members</h3>
+            <div class="row">
+                <div class="column" style="float: left; width: 25%; padding: 20px;">
+                    <img src="yeji.jpg" style="width: 100%; border-radius: 20px;">
+                    <div class="position-tag" style="bottom: 85px; left: 40px;">Leader</div>
+                    <div class="position-tag" style="bottom: 85px; left: 130px;">Lead Vocalist</div>
+                    <h4 style="color:black;">Yeji</h4>
+                </div>
+                <div class="column" style="float: left; width: 25%; padding: 20px;">
+                    <img src="lia.jpg" style="width: 100%; border-radius: 20px;">
+                    <div class="position-tag" style="bottom: 85px; left: 360px;">Main Vocalist</div>
+                    <div class="position-tag" style="bottom: 85px; left: 485px;">Sub-Rapper</div>
+                    <h4 style="color:black;">Lia</h4>
+                </div>
+                <div class="column" style="float: left; width: 25%; padding: 20px;">
+                    <img src="ryujin.jpg" style="width: 100%; border-radius: 20px;">
+                    <div class="position-tag" style="bottom: 85px; left: 690px;">Main Rapper</div>
+                    <div class="position-tag" style="bottom: 85px; left: 810px;">Lead Dancer</div>
+                    <h4 style="color:black;">Ryujin</h4>
+                </div>
+                <div class="column" style="float: left; width: 25%; padding: 20px;">
+                    <img src="chae.jpg" style="width: 100%; border-radius: 20px;">
+                    <div class="position-tag" style="bottom: 85px; left: 1010px;">Vocalist</div>
+                    <div class="position-tag" style="bottom: 85px; left: 1100px;">Main Dancer</div>
+                    <h4 style="color:black;">Chaeryoung</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column" style="float: center;width: 25%; padding: 20px;">
+                    <img src="yuna.jpg" style="width: 100%; border-radius: 20px;">
+                    <div class="position-tag" style="bottom: 85px; left: 40px;">Visual</div>
+                    <div class="position-tag" style="bottom: 85px; left: 130px;">Lead Dancer</div>
+                    <h4 style="color:black;">Yuna</h4>
+                </div>
+            </div>
+    <script src="info.js"></script>
+    </body>
+</html>

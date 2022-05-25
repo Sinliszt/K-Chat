@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>K-Chat</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Ms+Madi&family=Roboto&family=Smooch&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+          <div class="menu">
+            <h1 style="text-align: center; font-family: 'Koulen', cursive;">K-CHAT</h1>
+            <h4 id="welcome" style="text-align: right; margin-top: -70px; font-family: 'Roboto', sans-serif;"><span>&nbsp;&nbsp;&nbsp;
+              <div class="dropdown">
+                <img src="profile.jpg" id='drop_btn' style="width: 45px; height: 45px;">
+                <div class="dropdown-content">
+                  <a id="logout">Logout</a>
+                </div>
+              </div></span></h4>
+        </div>
+        <br>
+        <div class="row" style="margin-top: 100px;">
+            <div class="column">
+              <img src="blackpink.jpg" class ="img-index" style="width:100%" id="blackpink" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 25px;">4 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 140px;">YG</div>
+              <h3 style="color:pink;"><b>BLΛƆKPIИK</b></h4>
+            </div>
+            <div class="column">
+              <img src="bts.jpg" class="img-index" style="width:100%" id="bts" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 415px;">7 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 530px;">Big Hit</div>
+              <h3 style="color: black;"><b>B T S</b></h3>
+            </div>
+            <div class="column">
+              <img src="twice.jpg" class="img-index" style="width:100%" id="twice" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 810px;">9 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 925px;">JYP</div>
+              <h3 style="color:plum;"><b>TWICE</b></h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img src="rv.jpg" class ="img-index" style="width:100%" id="redvelvet" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 25px;">5 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 140px;">SM</div>
+              <h2 style="color:red; font-family: 'Ms Madi', cursive;"><b>Red Velvet</b></h2>
+            </div>
+            <div class="column">
+              <img src="straykids.jpg" class="img-index" style="width:100%" id="straykids" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 415px;">8 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 530px;">JYP</div>
+              <h2 style="color: black; font-family: 'Smooch', cursive;"><b>Stray</b><span style="color: red; font-family: 'Smooch', cursive;"><b> Kids</b></span></h2>
+            </div>
+            <div class="column">
+              <img src="idle.jpg" class="img-index" style="width:100%" id="gidle" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 810px;">5 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 925px;">Cube Entertainment</div>
+              <h3 style="color:blueviolet;"><b>(G)I-DLE</b></h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img src="exo.jpg" class ="img-index" style="width:100%" id="exo" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 25px;">9 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 140px;">SM</div>
+              <h3 style="color:black;"><b><i>EXO</i></b></h3>
+            </div>
+            <div class="column">
+              <img src="itzy.jpg" class="img-index" style="width:100%" id="itzy" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 415px;">5 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 530px;">JYP</div>
+              <h3 style="color: deeppink;"><b>i</b><span style="color: black;"><b>tzy</b></span></h3>
+            </div>
+            <div class="column">
+              <img src="txt.jpg" class="img-index" style="width:100%" id="txt" onclick="redirect(this.id);">
+              <div class="member-tag" style="bottom: 80px; left: 810px;">5 members</div>
+              <div class="company-tag" style="bottom: 80px; left: 925px;">Big Hit</div>
+              <h3 style="color:gold;"><b>+OMORROW X +OGETHER</b></h3>
+            </div>
+          </div>
+        </div>
+        <script src="group.js"></script>
+    </body>
+</html>
